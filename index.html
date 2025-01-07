@@ -19,6 +19,40 @@
                         @apply text-xs;
                     }
                 }
+                .SellingCard {
+                    @apply flex flex-col items-start justify-between w-56 h-56 m-5;
+                    > img {
+                        @apply w-56 h-48 rounded-lg;
+                    }
+                }
+                .sellingCardBody {
+                    @apply w-full flex flex-col justify-around  bg-[#DDC7BB];
+                }
+                .sellingCardAddress {
+                    @apply flex items-center py-1;
+                    img {
+                        @apply w-6 m-1;
+                    }
+                    h4 {
+                        @apply text-sm font-bold;
+                    }
+                }
+
+                .sellingCardProp {
+                    @apply flex justify-between py-1;
+                    img {
+                        @apply w-4 m-1;
+                    }
+                    p {
+                        @apply text-xs;
+                    }
+                }
+                .sellingCardFooter {
+                    @apply flex items-center justify-between m-1;
+                    h3 {
+                        @apply font-bold;
+                    }
+                }
                 .spacing {
                     @apply list-none space-y-2 md:text-left;
                 }
@@ -132,7 +166,80 @@
         </section>
 
         <!-- Popular Residences -->
-        <section> </section>
+        <section class="flex flex-col text-[#2B1B12] items-center justify-between my-8">
+            <h2 class="font-bold text-xl">Our Popular Residences</h2>
+            <div class="flex w-full items-center justify-center">
+                <div class="SellingCard">
+                    <img class="w-full" src="./images/BeautyHouse1.png" alt="A Beautiful House" />
+                    <div class="sellingCardBody">
+                        <div class="sellingCardAddress">
+                            <img src="./images/MapIcon1.png" alt="Map" />
+                            <h4> San Francisco, Califrnia</h4>
+                        </div>
+                        <div class="flex justify-around">
+                            <div class="sellingCardProp">
+                                <img src="./images/bedIcon.png" alt="Bed" />
+                                <p> 4 Rooms</p>
+                            </div>
+                            <div class="sellingCardProp">
+                                <img src="./images/MeasureIcon.png" alt="Measure" />
+                                <p> 3,500 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="sellingCardFooter">
+                            <button>Sign UP</button>
+                            <h3>$ 2,500,000</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="SellingCard">
+                    <img class="w-full" src="./images/BeautyHouse1.png" alt="A Beautiful House" />
+                    <div class="sellingCardBody">
+                        <div class="sellingCardAddress">
+                            <img src="./images/MapIcon1.png" alt="Map" />
+                            <h4> San Francisco, Califrnia</h4>
+                        </div>
+                        <div class="flex justify-around">
+                            <div class="sellingCardProp">
+                                <img src="./images/bedIcon.png" alt="Bed" />
+                                <p> 4 Rooms</p>
+                            </div>
+                            <div class="sellingCardProp">
+                                <img src="./images/MeasureIcon.png" alt="Measure" />
+                                <p> 3,500 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="sellingCardFooter">
+                            <button>Sign UP</button>
+                            <h3>$ 2,500,000</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="SellingCard">
+                    <img class="w-full" src="./images/BeautyHouse1.png" alt="A Beautiful House" />
+                    <div class="sellingCardBody">
+                        <div class="sellingCardAddress">
+                            <img src="./images/MapIcon1.png" alt="Map" />
+                            <h4> San Francisco, Califrnia</h4>
+                        </div>
+                        <div class="flex justify-around">
+                            <div class="sellingCardProp">
+                                <img src="./images/bedIcon.png" alt="Bed" />
+                                <p> 4 Rooms</p>
+                            </div>
+                            <div class="sellingCardProp">
+                                <img src="./images/MeasureIcon.png" alt="Measure" />
+                                <p> 3,500 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="sellingCardFooter">
+                            <button>Sign UP</button>
+                            <h3>$ 2,500,000</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="font-montserrat support-section py-10 text-center">
             <div class="container mx-auto">
