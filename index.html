@@ -5,6 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <script src="https://cdn.tailwindcss.com"></script>
+     <style type="text/tailwindcss">
+      @layer components {
+        .spacing {
+          @apply list-none space-y-2 md:text-left;
+        }
+        .txt-decoration {
+          @apply md:text-left font-bold mb-2 text-[#2b1b12] text-2xl leading-[26.82px];
+        }
+        .footer a {
+          @apply text-[#4f3527] text-lg leading-[21.94px] hover:underline;
+        }
+        .block-gap {
+          @apply sm:p-0;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     </head>
     <body>
         <!-- IMPOTANT js file is still needed to use tailwind -->
@@ -42,17 +68,118 @@
 
             </div>
 
-
         </header>
-   
-
-
-
-    
-    <!-- Code -->
 
     <!-- Rajvi -->
-    <footer>Hello.. this is footer section...</footer>
+    <section class="font-montserrat support-section py-10 text-center">
+      <div class="container mx-auto">
+        <!-- Header -->
+        <h2 class="text-2xl font-bold mb-2">Do You Have Any Questions?</h2>
+        <p class="text-lg font-medium mb-6">Get Help From Us</p>
+        <!-- Support Options -->
+        <div class="flex justify-center gap-8 mb-6">
+          <div class="text-center">
+            <p class="mt-2">
+              <i class="fa fa-comments-o"></i>
+              <a class="text-[#543e32] font-semibold hover:underline" href="#"
+                >Chat live with our support team</a
+              >
+            </p>
+          </div>
+          <div class="text-center">
+            <p class="mt-2">
+              <i class="fa fa-question-circle"></i>
+              <a class="text-[#543e32] font-semibold hover:underline" href="#"
+                >Browse our FAQ</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- Email Input -->
+        <form class="flex justify-center items-center gap-2">
+          <div
+            class="flex items-center border email-input px-3 py-2 rounded-lg"
+          >
+            <i class="fa fa-envelope text-lg mr-2"></i>
+            <input
+              type="email"
+              class="bg-transparent border-none focus:outline-none"
+              placeholder="Enter your email address..."
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-[#2b1b12] text-white hover:bg-[#543e32] submit-button px-6 py-2 rounded-lg"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer md:flex p-20 bg-[#ddc7bb] sm:text-center font-bold">
+      <!-- Logo and Description -->
+      <div class="container block-gap grid sm:grid-cols-1 md:grid-cols-1">
+        <div class="logo">
+          <img
+            class="mt-2 w-1/2"
+            src="./images/logo-footer.png"
+            alt="TrioWind Logo"
+          />
+        </div>
+        <div
+          class="description mt-3 text-[#4f3527] md:text-left text-lg leading-6"
+        >
+          Bringing you closer to your dream home, one click at a time.
+        </div>
+      </div>
+      <div class="container grid sm:grid-cols-1 md:grid-cols-4 gap-8 mt-6">
+        <!-- About Section -->
+        <div class="block-gap">
+          <h5 class="txt-decoration">About</h5>
+          <ul class="spacing">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+        <!-- Support Section -->
+        <div class="block-gap">
+          <h5 class="txt-decoration">Support</h5>
+          <ul class="spacing">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <!-- Find Us Section -->
+        <div class="block-gap">
+          <h5 class="txt-decoration">Find Us</h5>
+          <ul class="spacing">
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+        <!-- Social Links Section -->
+        <div class="block-gap">
+          <h5 class="txt-decoration">Our Social</h5>
+          <ul class="spacing">
+            <li>
+              <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter-square"></i> Twitter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!-- Code -->
   </body>
 </html>
