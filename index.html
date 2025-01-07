@@ -4,7 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <script src="https://cdn.tailwindcss.com"></script>
+        <style type="text/tailwindcss">
+            @layer components {
+                .choosingItem {
+                    @apply flex gap-4 w-full;
+                    /* h3 {
+                        @apply text-2xl;
+                    }
+                    img {
+                        @apply w-12 h-12;
+                    } */
+                }
+            }
+        </style>
     </head>
     <body>
         <!-- Julia -->
@@ -14,14 +26,11 @@
         <!-- Help To Find Dream Home -->
         <section class="flex gap-4 items-center justify-between m-8">
             <div>
-                <img class="w-[48rem] h-[14rem] rounded" src="./img/dreamHous.jpeg" alt="A Dream House" />
+                <img class="w-[41vm] h-[29vm]" src="./images/dreamHouse.png" alt="A Dream House" />
             </div>
             <div class="flex flex-col justify-between m-4 text-[#4F3527]">
                 <h2 class="text-2xl font-bold"> We Help You To Find Your Dream Home</h2>
-                <p class="text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, cum eaque. Ab eum rem delectus, incidunt nam mollitia aliquam facere illo! Minima nostrum aspernatur fugiat provident, molestias consectetur laboriosam
-                    sed.
-                </p>
+                <p class="text-sm"> From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality </p>
                 <div class="flex justify-between m-4 h3:">
                     <div>
                         <h3 class="text-2xl font-bold">8K+</h3>
@@ -39,12 +48,38 @@
             </div>
         </section>
         <!-- Why Choose Us -->
-        <section> </section>
+        <section>
+            <h2>Why Choose Us</h2>
+            <p>Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service </p>
+            <div>
+                <div class="choosingItem">
+                    <img src="" alt="Map icon" />
+                    <h4>Expert Guidance</h4>
+                    <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
+                </div>
+                <div class="choosingItem">
+                    <img src="" alt="Person icon" />
+                    <h4>Expert Guidance</h4>
+                    <p>Our services adapt to your unique needs, making your journey stress-free</p>
+                </div>
+                <div class="choosingItem">
+                    <img src="" alt="Process" />
+                    <h4>Expert Guidance</h4>
+                    <p>Stay informed with our clear and honest approach to buying your home</p>
+                </div>
+                <div class="choosingItem">
+                    <img src="" alt="HandIcon" />
+                    <h4>Expert Guidance</h4>
+                    <p>Providing peace of mind with our responsive and attentive customer service</p>
+                </div>
+            </div>
+        </section>
 
         <!-- Popular Residences -->
         <section> </section>
 
         <!-- Rajvi -->
         <!-- Code -->
+        <script src="https://cdn.tailwindcss.com"></script>
     </body>
 </html>
