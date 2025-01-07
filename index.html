@@ -8,7 +8,16 @@
         <style type="text/tailwindcss">
             @layer components {
                 .choosingItem {
-                    @apply flex flex-col border-red-700 bg-orange-50 border w-[20vm] h-[20vm];
+                    @apply flex flex-col items-start justify-between p-5 bg-orange-50 w-48 h-48 bg-[#DDC7BB] rounded-lg;
+                    img {
+                        @apply w-16 rounded;
+                    }
+                    h4 {
+                        @apply text-sm font-bold;
+                    }
+                    p {
+                        @apply text-xs;
+                    }
                 }
                 .spacing {
                     @apply list-none space-y-2 md:text-left;
@@ -95,27 +104,27 @@
             </div>
         </section>
         <!-- Why Choose Us -->
-        <section>
-            <h2>Why Choose Us</h2>
-            <p>Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service </p>
-            <div>
+        <section class="flex flex-col items-center justify-around text-[#2B1B12]">
+            <h2 class="text-center font-bold text-xl py-1">Why Choose Us</h2>
+            <p class="w-68 py-1">Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service </p>
+            <div class="flex justify-around w-full py-3">
                 <div class="choosingItem">
-                    <img src="" alt="Map icon" />
+                    <img src="./images/mapIcon.png" alt="Map icon" />
                     <h4>Expert Guidance</h4>
                     <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
                 </div>
                 <div class="choosingItem">
-                    <img src="" alt="Person icon" />
+                    <img src="./images/personalizedIcon.png" alt="Person icon" />
                     <h4>Expert Guidance</h4>
                     <p>Our services adapt to your unique needs, making your journey stress-free</p>
                 </div>
                 <div class="choosingItem">
-                    <img src="" alt="Process" />
+                    <img src="./images/TransparentIcon.png" alt="Process" />
                     <h4>Expert Guidance</h4>
                     <p>Stay informed with our clear and honest approach to buying your home</p>
                 </div>
                 <div class="choosingItem">
-                    <img src="" alt="HandIcon" />
+                    <img src="./images/supportIcon.png" alt="HandIcon" />
                     <h4>Expert Guidance</h4>
                     <p>Providing peace of mind with our responsive and attentive customer service</p>
                 </div>
