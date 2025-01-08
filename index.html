@@ -83,7 +83,12 @@
         .review {
           @apply bg-[#ddc7bb] shadow-md rounded-lg;
         }
+        .searchbar {
+          @apply bg-[#ddc7bb] shadow-md rounded-lg p-5;
+        }
       }
+
+      
     </style>
   </head>
     <body>
@@ -136,9 +141,58 @@
             
             <img src="images/hero image 1.png" alt="TrioWind Real Estates Building" max-width="">
         </img>
-
-
         </hero>
+
+        <!-- Search Bar -->
+        <search class="w-fit flex -mt-16">
+            <div class="searchbar">
+    
+                
+                    <div class="flex mb-4 align-bottom">
+        
+                        <!-- Search Filter Input -->
+                        <form class="flex justify-center items-center gap-2">
+                            <div class="flex items-center border email-input px-3 py-2 rounded-lg">
+                                <i class="fa fa-envelope text-lg mr-2"></i>
+                                    <input
+                                        type="email"
+                                        class="bg-transparent border-none focus:outline-none"
+                                        placeholder="Location"
+                                        required
+                                        />
+                            </div>
+
+                            <div class="flex items-center border email-input px-3 py-2 rounded-lg">
+                                <i class="fa fa-envelope text-lg mr-2"></i>
+                                    <input
+                                        type="email"
+                                        class="bg-transparent border-none focus:outline-none"
+                                        placeholder="Type"
+                                        required
+                                        />
+                            </div>
+
+                            <div class="flex items-center border email-input px-3 py-2 rounded-lg">
+                                <i class="fa fa-envelope text-lg mr-2"></i>
+                                    <input
+                                        type="email"
+                                        class="bg-transparent border-none focus:outline-none"
+                                        placeholder="Price Range"
+                                        required
+                                        />
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="bg-[#2b1b12] text-white hover:bg-[#543e32] 
+                                submit-button px-6 py-2 rounded-lg">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+                
+
+        </search>
 
         <!-- Alireza -->
         <!-- Help To Find Dream Home -->
