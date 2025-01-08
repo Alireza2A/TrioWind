@@ -30,7 +30,7 @@
           @apply sm:p-0;
         }
         .review {
-          @apply bg-[#ddc7bb] shadow-md rounded-lg w-80;
+          @apply bg-[#ddc7bb] shadow-md rounded-lg;
         }
       }
     </style>
@@ -45,11 +45,13 @@
 
     <!-- Rajvi -->
     <!-- What people say about section -->
-    <section class="font-montserrat px-8 customer-review py-10">
-      <h2 class="text-2xl font-bold mb-6 text-center">
+    <section
+      class="font-montserrat support-section py-10 text-center customer-review"
+    >
+      <h2 class="text-2xl font-bold mb-6">
         What People Say <br />About TrioWind
       </h2>
-      <div class="container relative">
+      <div class="container relative px-4">
         <div class="lg:flex md:flex gap-6 justify-center">
           <!-- Testinomial Card 1 -->
           <div class="review">
@@ -59,20 +61,22 @@
               class="w-full h-40 object-cover rounded-lg"
             />
 
-            <div class="user-profile p-6">
+            <div class="user-profile p-6 mb-6">
               <div class="flex items-center mb-4">
                 <img
                   src="images/profile1.png"
                   alt="Sarah Nguyen"
                   class="w-10 h-10 rounded-full mr-4"
                 />
-                <div>
-                  <h3 class="font-bold text-gray-800">Sarah Nguyen</h3>
-                  <p class="text-sm text-gray-600">San Francisco</p>
+                <div class="">
+                  <h3 class="font-bold text-[#543e32]">Sarah Nguyen</h3>
+                  <p class="text-left text-sm text-[#543e32] font-semibold">
+                    San Francisco
+                  </p>
                 </div>
                 <div class="ml-auto text-yellow-500 font-bold">5.0 ★</div>
               </div>
-              <p class="text-gray-600">
+              <p class="text-[#543e32] text-justify">
                 TrioWind truly cares about their clients. They listened to my
                 needs and preferences and helped me find the perfect home in the
                 Bay Area. Their professionalism and attention to detail are
@@ -88,7 +92,7 @@
               alt="Living Room"
               class="w-full h-40 object-cover rounded-lg"
             />
-            <div class="p-6 user-profile">
+            <div class="p-6 user-profile mb-6">
               <div class="flex items-center mb-4">
                 <img
                   src="images/profile2.png"
@@ -96,12 +100,14 @@
                   class="w-10 h-10 rounded-full mr-4"
                 />
                 <div>
-                  <h3 class="font-bold text-gray-800">Michael Rodriguez</h3>
-                  <p class="text-sm text-gray-600">San Diego</p>
+                  <h3 class="font-bold text-[#2b1b12]">Michael Rodriguez</h3>
+                  <p class="text-left text-sm text-[#543e32] font-semibold">
+                    San Diego
+                  </p>
                 </div>
                 <div class="ml-auto text-yellow-500 font-bold">4.5 ★</div>
               </div>
-              <p class="text-gray-600">
+              <p class="text-[#543e32] text-justify">
                 I had a fantastic experience working with TrioWind. Their
                 expertise and personalized service exceeded my expectations. I
                 found my dream home quickly and smoothly. Highly recommended!
@@ -116,7 +122,7 @@
               alt="Cozy Bedroom"
               class="w-full h-40 object-cover rounded-lg"
             />
-            <div class="p-6 user-profile">
+            <div class="p-6 user-profile mb-6">
               <div class="flex items-center mb-4">
                 <img
                   src="images/profile3.png"
@@ -124,12 +130,14 @@
                   class="w-10 h-10 rounded-full mr-4"
                 />
                 <div>
-                  <h3 class="font-bold text-gray-800">Emily Johnson</h3>
-                  <p class="text-sm text-gray-600">Los Angeles</p>
+                  <h3 class="font-bold text-[#2b1b12]">Emily Johnson</h3>
+                  <p class="text-left text-sm text-[#543e32] font-semibold">
+                    Los Angeles
+                  </p>
                 </div>
                 <div class="ml-auto text-yellow-500 font-bold">5.0 ★</div>
               </div>
-              <p class="text-gray-600">
+              <p class="text-[#543e32] text-justify">
                 TrioWind made my dream of owning a home a reality! Their team
                 provided exceptional support and guided me through every step of
                 the process. I couldn’t be happier with my new home!
@@ -152,12 +160,14 @@
                   class="w-10 h-10 rounded-full mr-4"
                 />
                 <div>
-                  <h3 class="font-bold text-gray-800">Michael Rodriguez</h3>
-                  <p class="text-sm text-gray-600">San Diego</p>
+                  <h3 class="font-bold text-[#2b1b12]">Michael Rodriguez</h3>
+                  <p class="text-left text-sm text-[#543e32] font-semibold">
+                    San Diego
+                  </p>
                 </div>
                 <div class="ml-auto text-yellow-500 font-bold">4.5 ★</div>
               </div>
-              <p class="text-gray-600">
+              <p class="text-[#543e32] text-justify">
                 I had a fantastic experience working with TrioWind. Their
                 expertise and personalized service exceeded my expectations. I
                 found my dream home quickly and smoothly. Highly recommended!
@@ -167,10 +177,10 @@
         </div>
 
         <div
-          class="absolute inset-x-0 flex justify-between top-1/2 transform -translate-y-1/2"
+          class="absolute sm:hidden inset-x-0 flex justify-between top-1/2 transform -translate-y-1/2"
         >
           <button
-            class="bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300 focus:outline-none ml-4"
+            class="bg-[#543e32] p-2 rounded-full shadow hover:bg-[#2b1b12] focus:outline-none ml-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +188,7 @@
               viewBox="0 0 24 24"
               stroke-width="2"
               stroke="currentColor"
-              class="w-6 h-6 text-gray-800"
+              class="w-6 h-6 text-gray-300 font-semibold"
             >
               <path
                 stroke-linecap="round"
@@ -189,7 +199,7 @@
           </button>
 
           <button
-            class="bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300 focus:outline-none mr-4"
+            class="bg-[#543e32] p-2 rounded-full shadow hover:bg-[#2b1b12] focus:outline-none mr-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +207,7 @@
               viewBox="0 0 24 24"
               stroke-width="2"
               stroke="currentColor"
-              class="w-6 h-6 text-gray-800"
+              class="w-6 h-6 text-gray-300 font-semibold"
             >
               <path
                 stroke-linecap="round"
@@ -210,7 +220,7 @@
       </div>
     </section>
     <!-- Subscription section -->
-    <section class="font-montserrat support-section py-10 text-center">
+    <section class="font-montserrat support-section pb-10 text-center">
       <div class="container mx-auto">
         <h2 class="text-2xl font-bold mb-2">
           Do You Have Any Questions? <br />Get Help From Us
