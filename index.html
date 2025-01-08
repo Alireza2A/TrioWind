@@ -1,42 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+    <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <script src="https://cdn.tailwindcss.com"></script>
-     <style type="text/tailwindcss">
-      @layer components {
-        .spacing {
-          @apply list-none space-y-2 md:text-left;
-        }
-        .txt-decoration {
-          @apply md:text-left font-bold mb-2 text-[#2b1b12] text-2xl leading-[26.82px];
-        }
-        .footer a {
-          @apply text-[#4f3527] text-lg leading-[21.94px] hover:underline;
-        }
-        .block-gap {
-          @apply sm:p-0;
-        }
-      }
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+        <style type="text/tailwindcss">
+            @layer components {
+                .choosingItem {
+                    @apply flex flex-col items-start justify-between p-5 bg-orange-50 w-48 h-48 bg-[#DDC7BB] rounded-lg;
+                    img {
+                        @apply w-16 rounded;
+                    }
+                    h4 {
+                        @apply text-sm font-bold;
+                    }
+                    p {
+                        @apply text-xs;
+                    }
+                }
+                .SellingCard {
+                    @apply flex flex-col items-start justify-between w-56 h-56 m-5;
+                    > img {
+                        @apply w-56 h-48 rounded-t-lg;
+                    }
+                }
+                .sellingCardBody {
+                    @apply w-full flex flex-col items-start justify-around  bg-[#DDC7BB];
+                }
+                .sellingCardAddress {
+                    @apply flex items-center py-1;
+                    img {
+                        @apply w-6 m-1;
+                    }
+                    h4 {
+                        @apply text-sm font-bold;
+                    }
+                }
+
+                .sellingCardProp {
+                    @apply flex items-center justify-between mx-2;
+                    img {
+                        @apply w-4 mr-2;
+                    }
+                    p {
+                        @apply text-xs mr-2;
+                    }
+                }
+                .sellingCardFooter {
+                    @apply flex items-start justify-around w-full my-2;
+                    .button {
+                        @apply text-gray-100 bg-gray-900 font-semibold rounded p-1 text-xs mr-8 hover:bg-gray-800;
+                    }
+
+                    h3 {
+                        @apply font-bold text-base mx-2;
+                    }
+                }
+                .spacing {
+                    @apply list-none space-y-2 md:text-left;
+                }
+                .txt-decoration {
+                    @apply md:text-left font-bold mb-2 text-[#2b1b12] text-2xl leading-[26.82px];
+                }
+                .footer a {
+                    @apply text-[#4f3527] text-lg leading-[21.94px] hover:underline;
+                }
+                .block-gap {
+                    @apply sm:p-0;
+                }
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
     <body>
-        <!-- IMPOTANT js file is still needed to use tailwind -->
-        <!-- Julia -->
         <header class="h-20 bg-orange-50 text-orange-950 place-items-center flex justify-between p-16 px-24">
-            
             <div>
                 <h1 class="text-4xl font-semibold">TrioWind</h1>
             </div>
@@ -53,133 +94,242 @@
             <div class="text-sm flex place-items-center justify-between px-4 space-x-8">
                 <span>
                     <svg class="fill-orange-950 hover:fill-orange-800" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.5601 20.4452L19.9149 17.7981C23.3906 13.1533 22.4429 6.57034 17.7981 3.09462C13.1534 -0.381104 6.57037 0.566612 3.09465 5.21139C-0.381073 9.85616 0.566643 16.4392 5.21142 19.9149C8.94248 22.7069 14.067 22.7069 17.7981 19.9149L20.4452 22.562C21.0292 23.146 21.9761 23.146 22.56 22.562C23.144 21.978 23.144 21.0312 22.56 20.4472L22.5601 20.4452ZM11.5435 19.0179C7.41545 19.0179 4.06904 15.6715 4.06904 11.5435C4.06904 7.41542 7.41545 4.06901 11.5435 4.06901C15.6716 4.06901 19.018 7.41542 19.018 11.5435C19.0136 15.6697 15.6697 19.0136 11.5435 19.0179Z"/>
+                        <path
+                            d="M22.5601 20.4452L19.9149 17.7981C23.3906 13.1533 22.4429 6.57034 17.7981 3.09462C13.1534 -0.381104 6.57037 0.566612 3.09465 5.21139C-0.381073 9.85616 0.566643 16.4392 5.21142 19.9149C8.94248 22.7069 14.067 22.7069 17.7981 19.9149L20.4452 22.562C21.0292 23.146 21.9761 23.146 22.56 22.562C23.144 21.978 23.144 21.0312 22.56 20.4472L22.5601 20.4452ZM11.5435 19.0179C7.41545 19.0179 4.06904 15.6715 4.06904 11.5435C4.06904 7.41542 7.41545 4.06901 11.5435 4.06901C15.6716 4.06901 19.018 7.41542 19.018 11.5435C19.0136 15.6697 15.6697 19.0136 11.5435 19.0179Z"
+                        />
                     </svg>
                 </span>
                 <span>
                     <svg class="fill-orange-950 hover:fill-orange-800" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.8315 13.8502C7.92501 14.2033 4.94884 17.5042 5.0007 21.4262V21.6251C5.0007 22.3844 5.61629 23 6.37565 23C7.13502 23 7.75061 22.3844 7.75061 21.6251V21.3712C7.70928 18.9631 9.48641 16.9095 11.8755 16.6047C14.3974 16.3546 16.6445 18.1963 16.8946 20.7182C16.9094 20.8673 16.9168 21.017 16.917 21.1668V21.6251C16.917 22.3844 17.5326 23 18.2919 23C19.0513 23 19.6669 22.3844 19.6669 21.6251V21.1667C19.6624 17.1122 16.3719 13.829 12.3174 13.8335C12.1553 13.8337 11.9933 13.8392 11.8315 13.8502Z"/>
-                        <path d="M12.3339 11.9996C15.3713 11.9996 17.8337 9.53727 17.8337 6.49982C17.8337 3.46237 15.3713 1 12.3339 1C9.29641 1 6.83403 3.46237 6.83403 6.49982C6.83704 9.53603 9.29765 11.9966 12.3339 11.9996ZM12.3339 3.74991C13.8526 3.74991 15.0838 4.9811 15.0838 6.49982C15.0838 8.01855 13.8526 9.24973 12.3339 9.24973C10.8151 9.24973 9.58394 8.01855 9.58394 6.49982C9.58394 4.9811 10.8151 3.74991 12.3339 3.74991Z"/>
+                        <path
+                            d="M11.8315 13.8502C7.92501 14.2033 4.94884 17.5042 5.0007 21.4262V21.6251C5.0007 22.3844 5.61629 23 6.37565 23C7.13502 23 7.75061 22.3844 7.75061 21.6251V21.3712C7.70928 18.9631 9.48641 16.9095 11.8755 16.6047C14.3974 16.3546 16.6445 18.1963 16.8946 20.7182C16.9094 20.8673 16.9168 21.017 16.917 21.1668V21.6251C16.917 22.3844 17.5326 23 18.2919 23C19.0513 23 19.6669 22.3844 19.6669 21.6251V21.1667C19.6624 17.1122 16.3719 13.829 12.3174 13.8335C12.1553 13.8337 11.9933 13.8392 11.8315 13.8502Z"
+                        />
+                        <path
+                            d="M12.3339 11.9996C15.3713 11.9996 17.8337 9.53727 17.8337 6.49982C17.8337 3.46237 15.3713 1 12.3339 1C9.29641 1 6.83403 3.46237 6.83403 6.49982C6.83704 9.53603 9.29765 11.9966 12.3339 11.9996ZM12.3339 3.74991C13.8526 3.74991 15.0838 4.9811 15.0838 6.49982C15.0838 8.01855 13.8526 9.24973 12.3339 9.24973C10.8151 9.24973 9.58394 8.01855 9.58394 6.49982C9.58394 4.9811 10.8151 3.74991 12.3339 3.74991Z"
+                        />
                     </svg>
                 </span>
                 <button class="flex-col p-3 px-6 bg-orange-950 rounded-lg text-nowrap text-orange-50 hover:bg-orange-800">
                     <a>Sign up</a>
                 </button>
-
             </div>
-
         </header>
+        <!-- code -->
 
-    <!-- Rajvi -->
-    <section class="font-montserrat support-section py-10 text-center">
-      <div class="container mx-auto">
-        <!-- Header -->
-        <h2 class="text-2xl font-bold mb-2">Do You Have Any Questions?</h2>
-        <p class="text-lg font-medium mb-6">Get Help From Us</p>
-        <!-- Support Options -->
-        <div class="flex justify-center gap-8 mb-6">
-          <div class="text-center">
-            <p class="mt-2">
-              <i class="fa fa-comments-o"></i>
-              <a class="text-[#543e32] font-semibold hover:underline" href="#"
-                >Chat live with our support team</a
-              >
-            </p>
-          </div>
-          <div class="text-center">
-            <p class="mt-2">
-              <i class="fa fa-question-circle"></i>
-              <a class="text-[#543e32] font-semibold hover:underline" href="#"
-                >Browse our FAQ</a
-              >
-            </p>
-          </div>
-        </div>
-        <!-- Email Input -->
-        <form class="flex justify-center items-center gap-2">
-          <div
-            class="flex items-center border email-input px-3 py-2 rounded-lg"
-          >
-            <i class="fa fa-envelope text-lg mr-2"></i>
-            <input
-              type="email"
-              class="bg-transparent border-none focus:outline-none"
-              placeholder="Enter your email address..."
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            class="bg-[#2b1b12] text-white hover:bg-[#543e32] submit-button px-6 py-2 rounded-lg"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
-    </section>
-    <footer class="footer md:flex p-20 bg-[#ddc7bb] sm:text-center font-bold">
-      <!-- Logo and Description -->
-      <div class="container block-gap grid sm:grid-cols-1 md:grid-cols-1">
-        <div class="logo">
-          <img
-            class="mt-2 w-1/2"
-            src="./images/logo-footer.png"
-            alt="TrioWind Logo"
-          />
-        </div>
-        <div
-          class="description mt-3 text-[#4f3527] md:text-left text-lg leading-6"
-        >
-          Bringing you closer to your dream home, one click at a time.
-        </div>
-      </div>
-      <div class="container grid sm:grid-cols-1 md:grid-cols-4 gap-8 mt-6">
-        <!-- About Section -->
-        <div class="block-gap">
-          <h5 class="txt-decoration">About</h5>
-          <ul class="spacing">
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Resources</a></li>
-          </ul>
-        </div>
-        <!-- Support Section -->
-        <div class="block-gap">
-          <h5 class="txt-decoration">Support</h5>
-          <ul class="spacing">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        <!-- Find Us Section -->
-        <div class="block-gap">
-          <h5 class="txt-decoration">Find Us</h5>
-          <ul class="spacing">
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Newsletter</a></li>
-          </ul>
-        </div>
-        <!-- Social Links Section -->
-        <div class="block-gap">
-          <h5 class="txt-decoration">Our Social</h5>
-          <ul class="spacing">
-            <li>
-              <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter-square"></i> Twitter</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <!-- Code -->
-  </body>
+        <!-- Alireza -->
+        <!-- Help To Find Dream Home -->
+        <section class="flex gap-4 items-center justify-between m-8">
+            <div>
+                <img class="w-[41vm] h-[29vm]" src="./images/dreamHouse.png" alt="A Dream House" />
+            </div>
+            <div class="flex flex-col justify-between m-4 text-[#4F3527]">
+                <h2 class="text-2xl font-bold"> We Help You To Find Your Dream Home</h2>
+                <p class="text-sm"> From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality </p>
+                <div class="flex justify-between m-4 h3:">
+                    <div>
+                        <h3 class="text-2xl font-bold">8K+</h3>
+                        <p class="text-sm">House Available</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">6K+</h3>
+                        <p class="text-sm">Houses Sold</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">2K+</h3>
+                        <p class="text-sm">Trusted Agents</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="flex flex-col items-center justify-around text-[#2B1B12]">
+            <h2 class="text-center font-bold text-xl py-1">Why Choose Us</h2>
+            <p class="w-68 py-1">Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service </p>
+            <div class="flex justify-around w-full py-3">
+                <div class="choosingItem">
+                    <img src="./images/mapIcon.png" alt="Map icon" />
+                    <h4>Expert Guidance</h4>
+                    <p>Benefit from our team's seasoned expertise for a smooth buying experience</p>
+                </div>
+                <div class="choosingItem">
+                    <img src="./images/personalizedIcon.png" alt="Person icon" />
+                    <h4>Expert Guidance</h4>
+                    <p>Our services adapt to your unique needs, making your journey stress-free</p>
+                </div>
+                <div class="choosingItem">
+                    <img src="./images/TransparentIcon.png" alt="Process" />
+                    <h4>Expert Guidance</h4>
+                    <p>Stay informed with our clear and honest approach to buying your home</p>
+                </div>
+                <div class="choosingItem">
+                    <img src="./images/supportIcon.png" alt="HandIcon" />
+                    <h4>Expert Guidance</h4>
+                    <p>Providing peace of mind with our responsive and attentive customer service</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Residences -->
+        <section class="flex flex-col text-[#2B1B12] items-center justify-between my-8">
+            <h2 class="font-bold text-xl">Our Popular Residences</h2>
+            <div class="flex w-full items-center justify-center">
+                <div class="SellingCard">
+                    <img class="w-full" src="./images/BeautyHouse1.png" alt="A Beautiful House" />
+                    <div class="sellingCardBody">
+                        <div class="sellingCardAddress">
+                            <img src="./images/MapIcon1.png" alt="Map" />
+                            <h4> San Francisco, Califrnia</h4>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <div class="sellingCardProp">
+                                <img src="./images/bedIcon.png" alt="Bed" />
+                                <p> 4 Rooms</p>
+                            </div>
+                            <div class="sellingCardProp">
+                                <img src="./images/MeasureIcon.png" alt="Measure" />
+                                <p> 3,500 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="sellingCardFooter">
+                            <button class="button">Sign up</button>
+                            <h3>$ 2,500,000</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="SellingCard">
+                    <img class="w-full" src="./images/BeautyHouse2.png" alt="A Beautiful House" />
+                    <div class="sellingCardBody">
+                        <div class="sellingCardAddress">
+                            <img src="./images/MapIcon1.png" alt="Map" />
+                            <h4> San Francisco, Califrnia</h4>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <div class="sellingCardProp">
+                                <img src="./images/bedIcon.png" alt="Bed" />
+                                <p> 3 Rooms</p>
+                            </div>
+                            <div class="sellingCardProp">
+                                <img src="./images/MeasureIcon.png" alt="Measure" />
+                                <p> 1,500 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="sellingCardFooter">
+                            <button class="button">Sign up</button>
+                            <h3>$ 850,000</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="SellingCard">
+                    <img class="w-full" src="./images/BeautyHouse3.png" alt="A Beautiful House" />
+                    <div class="sellingCardBody">
+                        <div class="sellingCardAddress">
+                            <img src="./images/MapIcon1.png" alt="Map" />
+                            <h4> San Francisco, Califrnia</h4>
+                        </div>
+                        <div class="flex justify-between w-full">
+                            <div class="sellingCardProp">
+                                <img src="./images/bedIcon.png" alt="Bed" />
+                                <p> 6 Rooms</p>
+                            </div>
+                            <div class="sellingCardProp">
+                                <img src="./images/MeasureIcon.png" alt="Measure" />
+                                <p> 4,000 sq ft</p>
+                            </div>
+                        </div>
+                        <div class="sellingCardFooter">
+                            <button class="button">Sign up</button>
+                            <h3>$ 3,700,000</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="font-montserrat support-section py-10 text-center">
+            <div class="container mx-auto">
+                <!-- Header -->
+                <h2 class="text-2xl font-bold mb-2">Do You Have Any Questions?</h2>
+                <p class="text-lg font-medium mb-6">Get Help From Us</p>
+                <!-- Support Options -->
+                <div class="flex justify-center gap-8 mb-6">
+                    <div class="text-center">
+                        <p class="mt-2">
+                            <i class="fa fa-comments-o"></i>
+                            <a class="text-[#543e32] font-semibold hover:underline" href="#">Chat live with our support team</a>
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <p class="mt-2">
+                            <i class="fa fa-question-circle"></i>
+                            <a class="text-[#543e32] font-semibold hover:underline" href="#">Browse our FAQ</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Email Input -->
+                <form class="flex justify-center items-center gap-2">
+                    <div class="flex items-center border email-input px-3 py-2 rounded-lg">
+                        <i class="fa fa-envelope text-lg mr-2"></i>
+                        <input type="email" class="bg-transparent border-none focus:outline-none" placeholder="Enter your email address..." required />
+                    </div>
+                    <button type="submit" class="bg-[#2b1b12] text-white hover:bg-[#543e32] submit-button px-6 py-2 rounded-lg"> Submit </button>
+                </form>
+            </div>
+        </section>
+        <footer class="footer md:flex p-20 bg-[#ddc7bb] sm:text-center font-bold">
+            <!-- Logo and Description -->
+            <div class="container block-gap grid sm:grid-cols-1 md:grid-cols-1">
+                <div class="logo">
+                    <img class="mt-2 w-1/2" src="./images/logo-footer.png" alt="TrioWind Logo" />
+                </div>
+                <div class="description mt-3 text-[#4f3527] md:text-left text-lg leading-6"> Bringing you closer to your dream home, one click at a time. </div>
+            </div>
+            <div class="container grid sm:grid-cols-1 md:grid-cols-4 gap-8 mt-6">
+                <!-- About Section -->
+                <div class="block-gap">
+                    <h5 class="txt-decoration">About</h5>
+                    <ul class="spacing">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                <!-- Support Section -->
+                <div class="block-gap">
+                    <h5 class="txt-decoration">Support</h5>
+                    <ul class="spacing">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Find Us Section -->
+                <div class="block-gap">
+                    <h5 class="txt-decoration">Find Us</h5>
+                    <ul class="spacing">
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <!-- Social Links Section -->
+                <div class="block-gap">
+                    <h5 class="txt-decoration">Our Social</h5>
+                    <ul class="spacing">
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter-square"></i> Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
