@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style type="text/tailwindcss">
-            @layer components {
-                .choosingItem {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrioWind - Real Estate Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+     @layer components {
+      .choosingItem {
                     @apply flex flex-col items-start justify-between p-5 bg-orange-50 w-48 h-48 bg-[#DDC7BB] rounded-lg;
                     img {
                         @apply w-16 rounded;
@@ -57,24 +67,24 @@
                         @apply font-bold text-base mx-2;
                     }
                 }
-                .spacing {
-                    @apply list-none space-y-2 md:text-left;
-                }
-                .txt-decoration {
-                    @apply md:text-left font-bold mb-2 text-[#2b1b12] text-2xl leading-[26.82px];
-                }
-                .footer a {
-                    @apply text-[#4f3527] text-lg leading-[21.94px] hover:underline;
-                }
-                .block-gap {
-                    @apply sm:p-0;
-                }
-            }
-        </style>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+ 
+        .spacing {
+          @apply list-none space-y-2 md:text-left;
+        }
+        .txt-decoration {
+          @apply md:text-left font-bold mb-2 text-[#2b1b12] text-2xl leading-[26.82px];
+        }
+        .footer a {
+          @apply text-[#4f3527] text-lg leading-[21.94px] hover:underline;
+        }
+        .block-gap {
+          @apply sm:p-0;
+        }
+        .review {
+          @apply bg-[#ddc7bb] shadow-md rounded-lg w-80;
+        }
+      }
+    </style>
     </head>
     <body>
         <header class="h-20 bg-orange-50 text-orange-950 place-items-center flex justify-between p-16 px-24">
@@ -245,91 +255,284 @@
                 </div>
             </div>
         </section>
+    <!-- Rajvi -->
+    <!-- What people say about section -->
+    <section class="font-montserrat px-8 customer-review py-10">
+      <h2 class="text-2xl font-bold mb-6 text-center">
+        What People Say <br />About TrioWind
+      </h2>
+      <div class="container relative">
+        <div class="lg:flex md:flex gap-6 justify-center">
+          <!-- Testinomial Card 1 -->
+          <div class="review">
+            <img
+              src="images/home1.jpg"
+              alt="Bedroom"
+              class="w-full h-40 object-cover rounded-lg"
+            />
 
-        <section class="font-montserrat support-section py-10 text-center">
-            <div class="container mx-auto">
-                <!-- Header -->
-                <h2 class="text-2xl font-bold mb-2">Do You Have Any Questions?</h2>
-                <p class="text-lg font-medium mb-6">Get Help From Us</p>
-                <!-- Support Options -->
-                <div class="flex justify-center gap-8 mb-6">
-                    <div class="text-center">
-                        <p class="mt-2">
-                            <i class="fa fa-comments-o"></i>
-                            <a class="text-[#543e32] font-semibold hover:underline" href="#">Chat live with our support team</a>
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <p class="mt-2">
-                            <i class="fa fa-question-circle"></i>
-                            <a class="text-[#543e32] font-semibold hover:underline" href="#">Browse our FAQ</a>
-                        </p>
-                    </div>
+            <div class="user-profile p-6">
+              <div class="flex items-center mb-4">
+                <img
+                  src="images/profile1.png"
+                  alt="Sarah Nguyen"
+                  class="w-10 h-10 rounded-full mr-4"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">Sarah Nguyen</h3>
+                  <p class="text-sm text-gray-600">San Francisco</p>
                 </div>
-                <!-- Email Input -->
-                <form class="flex justify-center items-center gap-2">
-                    <div class="flex items-center border email-input px-3 py-2 rounded-lg">
-                        <i class="fa fa-envelope text-lg mr-2"></i>
-                        <input type="email" class="bg-transparent border-none focus:outline-none" placeholder="Enter your email address..." required />
-                    </div>
-                    <button type="submit" class="bg-[#2b1b12] text-white hover:bg-[#543e32] submit-button px-6 py-2 rounded-lg"> Submit </button>
-                </form>
+                <div class="ml-auto text-yellow-500 font-bold">5.0 ★</div>
+              </div>
+              <p class="text-gray-600">
+                TrioWind truly cares about their clients. They listened to my
+                needs and preferences and helped me find the perfect home in the
+                Bay Area. Their professionalism and attention to detail are
+                unmatched.
+              </p>
             </div>
-        </section>
-        <footer class="footer md:flex p-20 bg-[#ddc7bb] sm:text-center font-bold">
-            <!-- Logo and Description -->
-            <div class="container block-gap grid sm:grid-cols-1 md:grid-cols-1">
-                <div class="logo">
-                    <img class="mt-2 w-1/2" src="./images/logo-footer.png" alt="TrioWind Logo" />
+          </div>
+
+          <!-- Testinomial Card 2 -->
+          <div class="review">
+            <img
+              src="images/home2.jpg"
+              alt="Living Room"
+              class="w-full h-40 object-cover rounded-lg"
+            />
+            <div class="p-6 user-profile">
+              <div class="flex items-center mb-4">
+                <img
+                  src="images/profile2.png"
+                  alt="Michael Rodriguez"
+                  class="w-10 h-10 rounded-full mr-4"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">Michael Rodriguez</h3>
+                  <p class="text-sm text-gray-600">San Diego</p>
                 </div>
-                <div class="description mt-3 text-[#4f3527] md:text-left text-lg leading-6"> Bringing you closer to your dream home, one click at a time. </div>
+                <div class="ml-auto text-yellow-500 font-bold">4.5 ★</div>
+              </div>
+              <p class="text-gray-600">
+                I had a fantastic experience working with TrioWind. Their
+                expertise and personalized service exceeded my expectations. I
+                found my dream home quickly and smoothly. Highly recommended!
+              </p>
             </div>
-            <div class="container grid sm:grid-cols-1 md:grid-cols-4 gap-8 mt-6">
-                <!-- About Section -->
-                <div class="block-gap">
-                    <h5 class="txt-decoration">About</h5>
-                    <ul class="spacing">
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Resources</a></li>
-                    </ul>
+          </div>
+
+          <!-- Testinomial Card 3 -->
+          <div class="review">
+            <img
+              src="images/home3.jpg"
+              alt="Cozy Bedroom"
+              class="w-full h-40 object-cover rounded-lg"
+            />
+            <div class="p-6 user-profile">
+              <div class="flex items-center mb-4">
+                <img
+                  src="images/profile3.png"
+                  alt="Emily Johnson"
+                  class="w-10 h-10 rounded-full mr-4"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">Emily Johnson</h3>
+                  <p class="text-sm text-gray-600">Los Angeles</p>
                 </div>
-                <!-- Support Section -->
-                <div class="block-gap">
-                    <h5 class="txt-decoration">Support</h5>
-                    <ul class="spacing">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <!-- Find Us Section -->
-                <div class="block-gap">
-                    <h5 class="txt-decoration">Find Us</h5>
-                    <ul class="spacing">
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">Newsletter</a></li>
-                    </ul>
-                </div>
-                <!-- Social Links Section -->
-                <div class="block-gap">
-                    <h5 class="txt-decoration">Our Social</h5>
-                    <ul class="spacing">
-                        <li>
-                            <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter-square"></i> Twitter</a>
-                        </li>
-                    </ul>
-                </div>
+                <div class="ml-auto text-yellow-500 font-bold">5.0 ★</div>
+              </div>
+              <p class="text-gray-600">
+                TrioWind made my dream of owning a home a reality! Their team
+                provided exceptional support and guided me through every step of
+                the process. I couldn’t be happier with my new home!
+              </p>
             </div>
-        </footer>
+          </div>
+
+          <!-- Testinomial Card 4 -->
+          <div class="review">
+            <img
+              src="images/home4.jpg"
+              alt="Living Room"
+              class="w-full h-40 object-cover rounded-lg"
+            />
+            <div class="p-6 user-profile">
+              <div class="flex items-center mb-4">
+                <img
+                  src="images/profile4.png"
+                  alt="Michael Rodriguez"
+                  class="w-10 h-10 rounded-full mr-4"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">Michael Rodriguez</h3>
+                  <p class="text-sm text-gray-600">San Diego</p>
+                </div>
+                <div class="ml-auto text-yellow-500 font-bold">4.5 ★</div>
+              </div>
+              <p class="text-gray-600">
+                I had a fantastic experience working with TrioWind. Their
+                expertise and personalized service exceeded my expectations. I
+                found my dream home quickly and smoothly. Highly recommended!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute inset-x-0 flex justify-between top-1/2 transform -translate-y-1/2"
+        >
+          <button
+            class="bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300 focus:outline-none ml-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-6 h-6 text-gray-800"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+
+          <button
+            class="bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300 focus:outline-none mr-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-6 h-6 text-gray-800"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Subscription section -->
+    <section class="font-montserrat support-section py-10 text-center">
+      <div class="container mx-auto">
+        <h2 class="text-2xl font-bold mb-2">
+          Do You Have Any Questions? <br />Get Help From Us
+        </h2>
+
+        <div class="flex justify-center gap-8 mb-6">
+          <div class="text-center">
+            <p class="mt-2">
+              <i class="fa fa-comments-o"></i>
+              <a class="text-[#543e32] font-semibold hover:underline" href="#"
+                >Chat live with our support team</a
+              >
+            </p>
+          </div>
+          <div class="text-center">
+            <p class="mt-2">
+              <i class="fa fa-question-circle"></i>
+              <a class="text-[#543e32] font-semibold hover:underline" href="#"
+                >Browse our FAQ</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- Email Input -->
+        <form class="flex justify-center items-center gap-2">
+          <div
+            class="flex items-center border email-input px-3 py-2 rounded-lg"
+          >
+            <i class="fa fa-envelope text-lg mr-2"></i>
+            <input
+              type="email"
+              class="bg-transparent border-none focus:outline-none"
+              placeholder="Enter your email address..."
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-[#2b1b12] text-white hover:bg-[#543e32] submit-button px-6 py-2 rounded-lg"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer md:flex p-20 bg-[#ddc7bb] sm:text-center font-bold">
+      <!-- Logo and Description -->
+      <div class="container block-gap grid sm:grid-cols-1 md:grid-cols-1">
+        <div class="logo">
+          <img
+            class="mt-2 w-1/2"
+            src="./images/logo-footer.png"
+            alt="TrioWind Logo"
+          />
+        </div>
+        <div
+          class="description mt-3 text-[#4f3527] md:text-left text-lg leading-6"
+        >
+          Bringing you closer to your dream home, one click at a time.
+        </div>
+      </div>
+      <div class="container grid sm:grid-cols-1 md:grid-cols-4 gap-8 mt-6">
+        <!-- About Section -->
+        <div class="block-gap">
+          <h5 class="txt-decoration">About</h5>
+          <ul class="spacing">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+        <!-- Support Section -->
+        <div class="block-gap">
+          <h5 class="txt-decoration">Support</h5>
+          <ul class="spacing">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <!-- Find Us Section -->
+        <div class="block-gap">
+          <h5 class="txt-decoration">Find Us</h5>
+          <ul class="spacing">
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+        <!-- Social Links Section -->
+        <div class="block-gap">
+          <h5 class="txt-decoration">Our Social</h5>
+          <ul class="spacing">
+            <li>
+              <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter-square"></i> Twitter</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Code -->
+ 
     </body>
 </html>
