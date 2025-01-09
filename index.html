@@ -94,7 +94,7 @@
     </style>
   </head>
     <body>
-        <header class="h-20 bg-orange-50 text-orange-950 place-items-center flex justify-between p-16 px-24">
+        <header class="sm:h-auto lg:flex md:flex h-20 bg-orange-50 text-orange-950 place-items-center justify-between p-16 px-24">
             <div>
                 <h1 class="text-4xl font-semibold">TrioWind</h1>
             </div>
@@ -132,21 +132,23 @@
             </div>
 
         </header>
-        <hero class="bg-orange-50 min-h-80 place-content-stretch text-orange-950 align-text-top 
-        flex ps-24 pt-0 pr-10 py-40">
-            <article>
+        <hero class="bg-orange-50 place-content-stretch text-orange-950 align-text-top 
+        lg:flex md:flex sm:ps-0 pt-0 pr-10 py-40">
+            <article class="px-24 bg-orange-50">
                 <h1 class="text-4xl font-extrabold">Find Your Dream Home</h1> 
-                <p>Explore our curated selection of exquisite properties 
+                <p class="py-4">Explore our curated selection of exquisite properties 
                 meticulously tailored to your unique dream home vision</p>
-                
+                <button class="flex-col p-3 px-6 my-3 bg-orange-950 rounded-lg text-nowrap text-orange-50 hover:bg-orange-800">
+                  <a>Sign up</a>
+              </button>
             </article>
             
-            <img src="images/hero image 1.png" alt="TrioWind Real Estates Building" max-width="">
+            <img class="bg-orange-50" src="images/hero image 1.png" alt="TrioWind Real Estates Building" max-width="" >
         </img>
         </hero>
 
 <!-- Search Bar -->
-    <search section class="mx-auto w-fit flex -mt-10 support-section text-center customer-review">
+    <search section class="mx-auto w-fit lg:flex md:flex -mt-10 support-section text-center customer-review">
     <div class="searchbar relative p-2">
         <div class="lg:flex justify-center">
 
