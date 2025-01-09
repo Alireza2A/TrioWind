@@ -14,7 +14,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <style type="text/tailwindcss">
       @layer components {
         .spacing {
@@ -30,7 +32,7 @@
           @apply sm:p-0;
         }
         .review {
-          @apply bg-[#ddc7bb] shadow-md rounded-lg;
+          @apply bg-[#ddc7bb] rounded-lg hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out;
         }
       }
     </style>
@@ -214,7 +216,23 @@
     </section>
     <!-- Subscription section -->
     <section class="font-montserrat support-section pb-10 text-center">
-      <div class="container mx-auto">
+      <div
+        class="container mx-auto bg-[#e0cbc01b] rounded-lg shadow-lg p-6 w-fit fill-current hover:scale-110 transition-all duration-300 ease-in-out"
+      >
+        <div
+          class="relative left-1/2 -translate-x-1/2 mb-3 w-fit p-3 rounded-full bg-[#e0cbc0c4]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            class="h-20 w-20 text-[#543e32]"
+          >
+            <path
+              d="M5 20h14v-2H5v2zm7-18L5.33 12h3.62v6h6v-6h3.62L12 2z"
+            ></path>
+          </svg>
+        </div>
         <h2 class="text-2xl font-bold mb-2">
           Do You Have Any Questions? <br />Get Help From Us
         </h2>
@@ -238,7 +256,7 @@
           </div>
         </div>
         <!-- Email Input -->
-        <form class="flex justify-center items-center gap-2">
+        <form id="submitForm" class="flex justify-center items-center gap-2">
           <div
             class="flex items-center border email-input px-3 py-2 rounded-lg"
           >
@@ -252,11 +270,18 @@
           </div>
           <button
             type="submit"
-            class="bg-[#2b1b12] text-white hover:bg-[#543e32] submit-button px-6 py-2 rounded-lg"
+            class="bg-[#2b1b12] text-white hover:bg-red-700 hover:scale-110 transition-all duration-300 ease-in-out submit-button px-6 py-2 rounded-lg"
           >
-            Submit
+            SUBMIT
           </button>
         </form>
+        <!-- Success Message -->
+        <div
+          id="successMessage"
+          class="hidden mt-4 p-4 bg-green-100 text-green-800 border border-green-300 rounded-lg"
+        >
+          Success! Your form has been submitted.
+        </div>
       </div>
     </section>
     <!-- footer -->
@@ -324,5 +349,26 @@
       </div>
     </footer>
     <!-- Code -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get references to the form and success message
+        const form = document.getElementById("submitForm");
+        const successMessage = document.getElementById("successMessage");
+
+        // Add event listener to the form submission
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from actually submitting
+
+          // Show the success message
+          successMessage.classList.remove("hidden");
+
+          // Optionally, hide the success message after a few seconds (e.g., 3 seconds)
+          setTimeout(() => {
+            successMessage.classList.add("hidden");
+          }, 3000);
+        });
+      });
+    </script>
   </body>
 </html>
